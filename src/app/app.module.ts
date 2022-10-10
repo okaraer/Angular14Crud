@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddcontactComponent } from './addcontact/addcontact.component';
-import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -17,10 +17,9 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     ContactComponent,
     AddcontactComponent,
-    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, AccessRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
