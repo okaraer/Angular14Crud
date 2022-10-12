@@ -1,4 +1,3 @@
-import { AccessRoutingModule } from './access/access-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,7 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddcontactComponent } from './addcontact/addcontact.component';
-import { LoginComponent } from './login/login.component';
+import { StatusComponent } from './status/status.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,9 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     ContactComponent,
     AddcontactComponent,
-    LoginComponent,
+    StatusComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, AccessRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

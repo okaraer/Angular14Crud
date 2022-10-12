@@ -1,15 +1,18 @@
+import { MaterialModule } from './../../material-module';
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+
 
 @Component({
   selector: 'app-login',
+  standalone: true,
+  imports: [CommonModule, MaterialModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

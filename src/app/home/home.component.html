@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h1 [style.color]="colorname">{{ headername | uppercase }}</h1>
+
+<button (click)="Functionclick('deneme')">Tıkla</button>
+<br />
+<input #text (change)="Functionclick(this.text)" type="text" />
+<br />
+<input
+  [value]="isdisabled"
+  [disabled]="isdisabled"
+  #text
+  (change)="Functionclick(this.text)"
+  type="text"
+/>
+<br />
+<br />
+<input [(ngModel)]="headername" />

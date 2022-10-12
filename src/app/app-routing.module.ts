@@ -1,3 +1,4 @@
+import { StatusComponent } from './status/status.component';
 import { AddcontactComponent } from './addcontact/addcontact.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +27,14 @@ const routes: Routes = [
     loadComponent: () =>
       import('./login/login.component').then((opt) => opt.LoginComponent),
   },
+  {
+    path: '**',
+    component: StatusComponent,
+  },
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
