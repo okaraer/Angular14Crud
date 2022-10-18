@@ -10,6 +10,7 @@ import { AddcontactComponent } from './addcontact/addcontact.component';
 import { StatusComponent } from './status/status.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddcontactComponent,
     StatusComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

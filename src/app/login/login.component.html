@@ -7,21 +7,38 @@
     matCardImage
     src="https://cdni.iconscout.com/illustration/premium/thumb/user-showing-user-login-page-in-website-or-application-1886527-1597938.png"
   />
-  <mat-card-content>
-    <form class="example-form">
+  <form
+    class="example-form"
+    #loginform="ngForm"
+    (submit)="ProdceedLogin(loginform)"
+  >
+    <mat-card-content>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Login Name</mat-label>
-        <input matInput placeholder="User Name" value="" />
+        <input
+          matInput
+          required
+          placeholder="User Name"
+          name="username"
+          ngModel
+        />
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Password" value="" />
+        <input
+          matInput
+          required
+          placeholder="Password"
+          type="password"
+          name="password"
+          ngModel
+        />
       </mat-form-field>
-    </form>
-  </mat-card-content>
-  <mat-card-actions align="start">
-    <button mat-raised-button type="submit" color="primary">Login</button>
-    <button mat-raised-button color="accent">Register</button>
-  </mat-card-actions>
+    </mat-card-content>
+    <mat-card-actions align="start">
+      <button mat-raised-button type="submit" color="primary">Login</button>
+      <button mat-raised-button color="accent">Register</button>
+    </mat-card-actions>
+  </form>
 </mat-card>
